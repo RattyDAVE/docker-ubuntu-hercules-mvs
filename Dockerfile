@@ -1,6 +1,6 @@
 #
 # Dockerfile for cpuminer
-# usage: docker run rattydave/docker-ubuntu-hercules-mvs
+# usage: docker run --name tk4- -p 3270:3270 rattydave/docker-ubuntu-hercules-mvs:latest
 #
 
 FROM		ubuntu:16.04
@@ -18,5 +18,7 @@ RUN		apt-get update && \
       apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
       rm -rf /var/lib/apt/lists/*
 
+
+EXPOSE 3270
 WORKDIR		/opt/hercules/tk4/
 ENTRYPOINT	["/opt/hercules/tk4/mvs"]
