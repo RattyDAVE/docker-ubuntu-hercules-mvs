@@ -15,6 +15,8 @@ docker run --name tk4- \
 
 Connect a 3270 terminal to port 3270.
 
+For more information see http://wotho.ethz.ch/tk4-/MVS_TK4-_v1.00_Users_Manual.pdf
+
 ### Users
 
 - HERC01 is a fully authorized user with full access to the RAKF users and profiles
