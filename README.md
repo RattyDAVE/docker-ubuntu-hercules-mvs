@@ -13,7 +13,17 @@ docker run --name tk4- \
            rattydave/docker-ubuntu-hercules-mvs:latest
 ```
 
-Connect a 3270 terminal to port 3270.
+Connect a 3270 terminal to port 3270 on the docker host.
+
+Or
+
+```
+docker run --name tk4- rattydave/docker-ubuntu-hercules-mvs:latest
+
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tk4-
+```
+
+Then connect a 3270 terminal to the container ip address on port 3270.
 
 For more information see http://wotho.ethz.ch/tk4-/MVS_TK4-_v1.00_Users_Manual.pdf
 
