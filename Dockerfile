@@ -6,7 +6,7 @@
 FROM		ubuntu:16.04
 
 RUN		apt-get update && \
-      apt-get install -y  wget && \
+      apt-get install -y  unzip wget && \
       cd /opt && \
       mkdir hercules && \
       cd hercules && \
