@@ -1,7 +1,7 @@
 # A docker container containing a fully running MVS 3.8j
 
 ## Thank you to the following.
-TK3 created by Volker Bandke       vbandke@bsp-gmbh.com
+TK3 created by Volker Bandke       vbandke@bsp-gmbh.com http://www.bsp-gmbh.com/turnkey
 
 TK4- update by Juergen Winkelmann  winkelmann@id.ethz.ch http://wotho.ethz.ch/tk4-/
 
@@ -41,6 +41,12 @@ tables. The logon password is CUL8TR.
 - IBMUSER is a fully authorized user without access to the RAKF users and profiles
 tables. The logon password is IBMPASS. This account is meant to be used for
 recovery purposes only.
+
+## Documentation
+
+Brief documentation is included in /opt/hercules/tk4/doc 
+
+The http://www.bsp-gmbh.com/turnkey/cookbook/index.html is your best starting point.
 
 ## About the Hardware
 The MVS 3.8j Tur(n)key 4- System runs on an IBM 3033 mainframe emulated by the Hercules System/370, ESA/390, and z/Architecture emulator which is Copyrighted (c) by Roger Bowler and others.
