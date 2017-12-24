@@ -48,6 +48,17 @@ Brief documentation is included in /opt/hercules/tk4/doc
 
 The http://www.bsp-gmbh.com/turnkey/cookbook/index.html is your best starting point.
 
+## Getting started notes
+
+PFKEYS
+
+F1 - Help
+F7 - Page Back
+F8 - Page Forward
+
+
+
+
 ## About the Hardware
 The MVS 3.8j Tur(n)key 4- System runs on an IBM 3033 mainframe emulated by the Hercules System/370, ESA/390, and z/Architecture emulator which is Copyrighted (c) by Roger Bowler and others.
 
