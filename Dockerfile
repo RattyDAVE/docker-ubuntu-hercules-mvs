@@ -19,6 +19,6 @@ RUN	apt-get update && \
       apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
       rm -rf /var/lib/apt/lists/*
 
-EXPOSE 3270 8038
-WORKDIR	/opt/hercules/tk4/
-ENTRYPOINT	["/opt/hercules/tk4/mvs"]
+EXPOSE      3270 8038
+WORKDIR     /opt/hercules/tk4/
+ENTRYPOINT  ["/opt/hercules/tk4/mvs"]
