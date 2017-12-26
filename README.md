@@ -52,58 +52,9 @@ The http://www.bsp-gmbh.com/turnkey/cookbook/index.html is your best starting po
 
 PFKEYS
 
-F1 - Help
+F3 - Exit
 F7 - Page Back
 F8 - Page Forward
-
-STARTING
-
-At the "==>" prompt enter "TSO". You will be asked for a user ID, enter "IBMUSER". You will then be asked for the password, enter "SYS1".
-Press enter when you see ispf.
-
-Getting the network working.
-
-From the ISPF menu type "3.4"
-	Replace "IBMUSER" with "DUZA" and press enter.
-	Find "DUZA.TCPPARMS" on the next screen, press F8 for more.
-	On the same line at the beginning type "E" and press enter.
-	 TO "PROFILE" TYPE THE LETTER "E" AND HIT ENTER	
-	PAGE DOWN TO LINE 90 WHICH WILL LOOK LIKE THIS:
-
-		000090 DEVICE LCS1   LCS           E20
-		000091 LINK ETH1  ETHERNET  0  LCS1
-		000092
-		000093 HOME
-		000094    10.0.1.20    ETH1
-		000095
-		000096 GATEWAY
-		000097    10.0.1.100 = ETH1 1500 HOST
-		000098
-		000099 DEFAULTNET 10.0.1.100 ETH1 1500 0
-
-	MAKE IT LOOK LIKE THIS:
-
-		000090 DEVICE CTCA1 CTC e20
-		000091 LINK CTC1 CTC 1 CTCA1
-		000092
-		000093 HOME
-		000094    192.168.0.210  CTC1
-		000095
-		000096 GATEWAY
-		000097    192.168.0.1  = CTC1 1492 HOST
-		000098
-		000099 DEFAULTNET 192.168.0.5 CTC1 1492 0
-
-	*****SPECIAL NOTE***** IF YOURE NOT ON A 192.168.0.* NETWORK JUST MATCH UP THE FIRST IP ADDRESS TO BE THE ONE YOU SET IN THE .CONF FILE. THE SECOND IS YOUR ROUTER IP ADDRESS AND THE THIRD IS THE IP ADDRESS OF THE HERCULES HOST MACHINE
-
-	WHEN DONE ON THE 'Command ===>' LINE TYPE "SAVE" AND THEN "END"
-	GO BACK TO THE OTHER c3270 WINDOW AND TYPE "STOP TCPIP" AND THEN "START TCPIP"
-
-	IN LINUX IN A NEW TERMINAL WINDOW RUN THE FOLLOWING AS ROOT:
-		echo "1"  > /proc/sys/net/ipv4/conf/all/proxy_arp 
-		echo "1"  > /proc/sys/net/ipv4/conf/all/forwarding 
-
-
 
 ## About the Hardware
 The MVS 3.8j Tur(n)key 4- System runs on an IBM 3033 mainframe emulated by the Hercules System/370, ESA/390, and z/Architecture emulator which is Copyrighted (c) by Roger Bowler and others.
