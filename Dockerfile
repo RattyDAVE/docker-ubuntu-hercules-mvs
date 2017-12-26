@@ -13,7 +13,8 @@ RUN	apt-get update && \
       mkdir tk4 && \
       cd tk4 && \
       wget http://wotho.ethz.ch/tk4-/tk4-_v1.00_current.zip && \
-      unzip tk4-_v1.00_current.zip && \      
+      unzip tk4-_v1.00_current.zip && \
+      echo 0010 3270 CONS >> /opt/hercules/tk4/conf/intcons.cnf && \
       apt-get -y autoclean && apt-get -y autoremove && \
       apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
       rm -rf /var/lib/apt/lists/*
