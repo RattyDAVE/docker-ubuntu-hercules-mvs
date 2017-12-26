@@ -26,6 +26,16 @@ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}
 
 Then connect a 3270 terminal to the container ip address on port 3270.
 
+```
+x3270 ipaddress:3270
+```
+
+Optionally you can connect to the CONSOLE session.
+
+```
+x3270 CONS@ipaddress:3270
+```
+
 If you need a development system with x3270 pre installed then have a look at https://hub.docker.com/r/rattydave/docker-ubuntu-xrdp-mate-custom/ and pull rattydave/docker-ubuntu-xrdp-mate-custom:v2-tools
 
 For more information see http://wotho.ethz.ch/tk4-/MVS_TK4-_v1.00_Users_Manual.pdf
