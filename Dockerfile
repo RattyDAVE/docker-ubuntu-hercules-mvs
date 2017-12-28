@@ -1,8 +1,3 @@
-#
-# Dockerfile for cpuminer
-# usage: docker run --name tk4- -p 3270:3270 -p 8038:8038 rattydave/docker-ubuntu-hercules-mvs:latest
-#
-
 FROM	ubuntu:16.04
 
 RUN	apt-get update && \
