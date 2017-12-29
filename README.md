@@ -1,9 +1,13 @@
 # A docker container containing a fully running MVS 3.8j
 
-## Thank you to the following.
-TK3 created by Volker Bandke       vbandke@bsp-gmbh.com http://www.bsp-gmbh.com/turnkey
+# Part of the retro mainframe series.
 
-TK4- update by Juergen Winkelmann  winkelmann@id.ethz.ch http://wotho.ethz.ch/tk4-/
+* https://hub.docker.com/r//rattydave/docker-ubuntu-hercules-vm370 - vm370 Emulator with Robert O'Hara's Six Pack
+* https://hub.docker.com/r/rattydave/docker-ubuntu-hercules-mvs - Fully running MVS 3.8j Tur(n)key 4- System. IBM Mainframe.
+
+## Thank you to the following.
+* TK3 created by Volker Bandke       vbandke@bsp-gmbh.com http://www.bsp-gmbh.com/turnkey
+* TK4- update by Juergen Winkelmann  winkelmann@id.ethz.ch http://wotho.ethz.ch/tk4-/
 
 ## Usage
 
@@ -62,9 +66,9 @@ The http://www.bsp-gmbh.com/turnkey/cookbook/index.html is your best starting po
 
 PFKEYS
 
-F3 - Exit
-F7 - Page Back
-F8 - Page Forward
+* F3 - Exit
+* F7 - Page Back
+* F8 - Page Forward
 
 ## About the Hardware
 The MVS 3.8j Tur(n)key 4- System runs on an IBM 3033 mainframe emulated by the Hercules System/370, ESA/390, and z/Architecture emulator which is Copyrighted (c) by Roger Bowler and others.
