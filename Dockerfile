@@ -17,5 +17,5 @@ RUN	apt-get update && \
 
 EXPOSE      3270 8038
 WORKDIR     /opt/hercules/tk4/
-#ENTRYPOINT  ["/opt/hercules/tk4/mvs"]
-ENTRYPOINT  ["/usr/bin/screen","-dm","-S","herc","./mvs"]
+ENTRYPOINT  ["/opt/hercules/tk4/mvs"]
+#ENTRYPOINT  ["/usr/bin/screen","-dm","-S","herc","./mvs"]
