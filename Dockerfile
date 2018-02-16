@@ -1,7 +1,7 @@
 FROM	ubuntu:16.04
 
 RUN	apt-get update && \
-      apt-get install -y  unzip wget && \
+      apt-get install -y  unzip wget screen && \
       cd /opt && \
       mkdir hercules && \
       cd hercules && \
@@ -17,4 +17,5 @@ RUN	apt-get update && \
 
 EXPOSE      3270 8038
 WORKDIR     /opt/hercules/tk4/
-ENTRYPOINT  ["/opt/hercules/tk4/mvs"]
+#ENTRYPOINT  ["/opt/hercules/tk4/mvs"]
+ENTRYPOINT  ["/usr/bin/screen","-dm","-S","herc","./mvs"]
