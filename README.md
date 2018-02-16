@@ -16,7 +16,7 @@ Use https://github.com/RattyDAVE/docker-ubuntu-hercules-mvs/issues to send feedb
 ## Usage
 
 ```
-docker run --name tk4- \
+docker run -d --name tk4- \
            -p 3270:3270 -p 8038:8038 \
            rattydave/docker-ubuntu-hercules-mvs:latest
 ```
