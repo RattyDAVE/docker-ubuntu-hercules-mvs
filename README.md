@@ -17,7 +17,7 @@ Use https://github.com/RattyDAVE/docker-ubuntu-hercules-mvs/issues to send feedb
 ## Usage
 
 ```
-docker run -d --name tk4- \
+docker run -dit --name tk4- \
            -p 3270:3270 -p 8038:8038 \
            rattydave/docker-ubuntu-hercules-mvs:latest
 ```
@@ -28,7 +28,7 @@ To get the http://docker.host:8038 for the Hercules console.
 Or
 
 ```
-docker run --name tk4- rattydave/docker-ubuntu-hercules-mvs:latest
+docker run -dit --name tk4- rattydave/docker-ubuntu-hercules-mvs:latest
 
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tk4-
 ```
