@@ -1,7 +1,7 @@
 FROM rattydave/docker-ubuntu-hercules-mvs:latest as builder
 
 
-FROM scratch		
+FROM alpine:edge		
 		
 WORKDIR /opt/		
 COPY --from=builder /opt/ .		
