@@ -75,9 +75,8 @@ recovery purposes only.
 
 ## Documentation
 
-Brief documentation is included in /opt/hercules/tk4/doc 
-
-The http://www.bsp-gmbh.com/turnkey/cookbook/index.html is your best starting point.
+Brief documentation is included in /opt/hercules/tk4/doc
+Also found at http://wotho.ethz.ch/tk4-/MVS_TK4-_v1.00_Users_Manual.pdf
 
 ## Getting started notes
 
