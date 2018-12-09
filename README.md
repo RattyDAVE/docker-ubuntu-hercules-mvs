@@ -39,13 +39,25 @@ Then connect a 3270 terminal to the container ip address on port 3270.
 x3270 ipaddress:3270
 ```
 
-Optionally you can connect to the CONSOLE session.
-
-```
-x3270 CONS@ipaddress:3270
-```
-
 If you need a development system with x3270 pre installed then have a look at https://hub.docker.com/r/rattydave/docker-ubuntu-xrdp-mate-custom/ and pull rattydave/docker-ubuntu-xrdp-mate-custom:v2-tools
+
+
+## Add Full Function Console when Running in Unattended Mode
+
+Point a web browser to port 8038 of the host system running TK4-. This will typically
+be 127.0.0.1, aka localhost.
+
+Enter '''attach 010 3270 CONS''' in the command field of the web browser session.
+
+Connect a tn3270 emulator of your choice to port 3270 of the host system running
+TK4- (which typically will be docker host IP). Use CONS for the LUNAME (or equivalent)
+connection parameter of the tn3270 client. A panel showing the TK4- logo and
+information about Hercules and the host operating system will be displayed.
+
+Enter '''/v 010,console,auth=all''' in the command field of the web browser session. An MVS console will now be
+activated in the tn3270 session.
+
+It is recommended to press PF11 at the newly activated console at this point. This will remove the annoying default display area which occupies most of the console’s output area. Alternatively PF23 can be used if in addition the popular '''mn jobnames,t''' and '''mn sess,t''' commands are to be issued
 
 For more information see http://wotho.ethz.ch/tk4-/MVS_TK4-_v1.00_Users_Manual.pdf
 
