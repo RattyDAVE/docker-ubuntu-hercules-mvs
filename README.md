@@ -80,15 +80,10 @@ Also found at http://wotho.ethz.ch/tk4-/MVS_TK4-_v1.00_Users_Manual.pdf
 
 ## Basic TCP/IP Support
 
-Jason Winter’s TCPIP instruction (opcode X’75’) has been re-fitted to work with the Hercules
-version that comes with TK4-. The instruction dates back to 2002 and was last updated
-around 2009. It allows the Hercules guest to access the IP stack of the host system on which
-Hercules is running. The current implementation provides the complete functionality as
+Jason Winter’s TCPIP instruction (opcode X’75’) has been re-fitted to work with the Hercules version that comes with TK4-. The instruction dates back to 2002 and was last updated around 2009. It allows the Hercules guest to access the IP stack of the host system on which Hercules is running. The current implementation provides the complete functionality as
 designed in 2002/2009.
-However, from today’s point of view, the given implementation may compromise the TK4-
-security concept and attract risks from the network. Before trying to use TCP/IP connectivity
-it is strongly recommended to read TSO HELP member TCPIP. Besides providing detailed
-usage instructions it also explains possible risks and strategies to avoid them.
+
+However, from today’s point of view, the given implementation may compromise the TK4- security concept and attract risks from the network. Before trying to use TCP/IP connectivity it is strongly recommended to read TSO HELP member TCPIP. Besides providing detailed usage instructions it also explains possible risks and strategies to avoid them.
 
 ## Getting started notes
 
