@@ -3,7 +3,7 @@
 FROM	ubuntu:20.04
 
 RUN	apt-get update && \
-      apt-get install -y  unzip wget && \
+      apt-get install -y  unzip wget binutils && \
       cd /opt && \
       mkdir hercules && \
       cd hercules && \
