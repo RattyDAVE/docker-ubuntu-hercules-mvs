@@ -43,6 +43,18 @@ x3270 ipaddress:3270
 If you need a development system with x3270 pre installed then have a look at https://hub.docker.com/r/rattydave/docker-ubuntu-xrdp-mate-custom/ and pull rattydave/docker-ubuntu-xrdp-mate-custom:v2-tools
 
 
+## Auto Update
+
+To automatically update I recomend using watchtower.
+
+```
+docker run -d \
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  v2tec/watchtower 
+```
+
+
 ## Add Full Function Console when Running in Unattended Mode
 
 Point a web browser to port 8038 of the host system running TK4-. This will typically
