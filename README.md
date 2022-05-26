@@ -13,7 +13,7 @@ Use https://github.com/RattyDAVE/docker-ubuntu-hercules-mvs/issues to send feedb
 
 ## Thank you to the following.
 * TK3 created by Volker Bandke       vbandke@bsp-gmbh.com http://www.bsp-gmbh.com/turnkey
-* TK4- update by Juergen Winkelmann  winkelmann@id.ethz.ch http://wotho.ethz.ch/tk4-/
+* TK4- update by Juergen Winkelmann  winkelmann@id.ethz.ch https://wotho.ethz.ch/tk4-/
 
 ## Usage
 
