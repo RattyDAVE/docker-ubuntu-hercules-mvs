@@ -15,7 +15,7 @@ RUN	apt-get update && \
       cd tk4 && \
       wget --no-check-certificate https://wotho.ethz.ch/tk4-/tk4-_v1.00_current.zip && \
       unzip tk4-_v1.00_current.zip && \
-      #rm  tk4-_v1.00_current.zip && \
+      rm  tk4-_v1.00_current.zip && \
       #echo 0010 3270 CONS >> /opt/hercules/tk4/conf/intcons.cnf && \
       apt-get -y purge wget unzip && \
       apt-get -y autoclean && apt-get -y autoremove && \
