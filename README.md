@@ -23,6 +23,14 @@ docker run -dit --name tk4- \
            rattydave/docker-ubuntu-hercules-mvs:latest
 ```
 
+Beta version with arm7 and arm64 builds
+
+```
+docker run -dit --name tk4- \
+           -p 3270:3270 -p 8038:8038 \
+           rattydave/docker-ubuntu-hercules-mvs:beta
+```
+
 Connect a 3270 terminal to port 3270 on the docker host.
 To get the http://docker.host:8038 for the Hercules console.
 
