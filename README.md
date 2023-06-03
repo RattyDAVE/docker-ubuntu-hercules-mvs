@@ -17,38 +17,52 @@ Use https://github.com/RattyDAVE/docker-ubuntu-hercules-mvs/issues to send feedb
 
 ## Usage
 
-```
-docker run -dit --name tk4- \
-           -p 3270:3270 -p 8038:8038 \
-           rattydave/docker-ubuntu-hercules-mvs:latest
-```
+1. Image Build
 
-Beta version with arm7 and arm64 builds
+    Specifying the ubuntu version:
+    ```shell
+    docker build . -t rattydave/docker-ubuntu-hercules-mvs:latest --build-arg IMAGE="ubuntu:23.04"
+    ```
 
-```
-docker run -dit --name tk4- \
-           -p 3270:3270 -p 8038:8038 \
-           rattydave/docker-ubuntu-hercules-mvs:beta
-```
+    Using the default version on Dockerfile
 
-Connect a 3270 terminal to port 3270 on the docker host.
-To get the http://docker.host:8038 for the Hercules console.
-
-Or
-
-```
-docker run -dit --name tk4- rattydave/docker-ubuntu-hercules-mvs:latest
-
-docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tk4-
+    ```shell
+    docker build . -t rattydave/docker-ubuntu-hercules-mvs:latest
 ```
 
-Then connect a 3270 terminal to the container ip address on port 3270.
+2. Running the container
+    ```
+    docker run -dit --name tk4- \
+            -p 3270:3270 -p 8038:8038 \
+            rattydave/docker-ubuntu-hercules-mvs:latest
+    ```
 
-```
-x3270 ipaddress:3270
-```
+    Beta version with arm7 and arm64 builds
 
-If you need a development system with x3270 pre installed then have a look at https://hub.docker.com/r/rattydave/docker-ubuntu-xrdp-mate-custom/ and pull rattydave/docker-ubuntu-xrdp-mate-custom:v2-tools
+    ```
+    docker run -dit --name tk4- \
+            -p 3270:3270 -p 8038:8038 \
+            rattydave/docker-ubuntu-hercules-mvs:beta
+    ```
+
+    Connect a 3270 terminal to port 3270 on the docker host.
+    To get the http://docker.host:8038 for the Hercules console.
+
+    Or
+
+    ```
+    docker run -dit --name tk4- rattydave/docker-ubuntu-hercules-mvs:latest
+
+    docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tk4-
+    ```
+
+    Then connect a 3270 terminal to the container ip address on port 3270.
+
+    ```
+    x3270 ipaddress:3270
+    ```
+
+    If you need a development system with x3270 pre installed then have a look at https://hub.docker.com/r/rattydave/docker-ubuntu-xrdp-mate-custom/ and pull rattydave/docker-ubuntu-xrdp-mate-custom:v2-tools
 
 
 ## Auto Update
