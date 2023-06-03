@@ -7,7 +7,7 @@ FROM	ubuntu:22.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN	apt-get update && \
-      apt-get install -y  unzip wget binutils && \
+      apt-get install -y unzip wget binutils && \
       cd /opt && \
       mkdir hercules && \
       cd hercules && \
@@ -17,6 +17,9 @@ RUN	apt-get update && \
       unzip tk4-_v1.00_current.zip && \
       rm  tk4-_v1.00_current.zip && \
       #echo 0010 3270 CONS >> /opt/hercules/tk4/conf/intcons.cnf && \
+      rm -rf /opt/hercules/tk4/hercules/source && \
+      rm -rf /opt/hercules/tk4/hercules/patches && \
+      rm -rf /opt/hercules/tk4/hercules/windows && \
       apt-get -y purge wget unzip && \
       apt-get -y autoclean && apt-get -y autoremove && \
       apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
@@ -25,4 +28,3 @@ RUN	apt-get update && \
 EXPOSE      3270 8038
 WORKDIR     /opt/hercules/tk4/
 ENTRYPOINT  ["/opt/hercules/tk4/mvs"]
-
