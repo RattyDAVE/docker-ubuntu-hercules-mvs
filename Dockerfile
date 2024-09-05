@@ -1,7 +1,8 @@
 #FROM	ubuntu:16.04
 #FROM	ubuntu:18.04
 #FROM	ubuntu:20.04
-FROM	ubuntu:22.04
+#FROM	ubuntu:22.04
+FROM	ubuntu:24.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -12,7 +13,7 @@ RUN   apt-get update && \
       cd hercules && \
       mkdir tk4 && \
       cd tk4 && \
-      wget --no-check-certificate https://wotho.ethz.ch/tk4-/tk4-_v1.00_current.zip && \
+      wget --no-check-certificate https://wotho.pebble-beach.ch/tk4-/tk4-_v1.00_current.zip && \
       unzip tk4-_v1.00_current.zip && \
       rm  tk4-_v1.00_current.zip && \
       #echo 0010 3270 CONS >> /opt/hercules/tk4/conf/intcons.cnf && \
