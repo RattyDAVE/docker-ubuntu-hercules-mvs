@@ -2,10 +2,10 @@
 #FROM	ubuntu:18.04
 #FROM	ubuntu:20.04
 #FROM	ubuntu:22.04
-FROM	ubuntu:24.04
-#FROM	ubuntu:26.04
+#FROM	ubuntu:24.04
+FROM	ubuntu:26.04
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN   apt-get update && \
       apt-get install -y unzip wget binutils && \
